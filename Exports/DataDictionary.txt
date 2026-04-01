@@ -1,0 +1,30 @@
+## ELO ##
+Card
+Character
+Elo
+Elo_win_only
+Elo_Act1
+Elo_Act2
+Elo_Act3
+TtlOffers
+
+## ENEMY ENCOUNTERS ##
+Timestamp
+Character
+Ascension
+EnemyComposition
+Floor
+HP_Lost
+HP_Gained
+Net_HP
+Max_HP
+HP_Lost/Max_HP
+Died
+Turns
+
+## RUNS ##
+Timestamp
+Character
+Ascension
+FloorReached
+Victory
