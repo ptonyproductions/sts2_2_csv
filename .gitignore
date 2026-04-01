@@ -10,7 +10,10 @@ wheels/
 .venv
 
 # User specific files
-Imports/*
+Imports/**
+!Imports/.gitkeep
+Exports/**
+!Exports/.gitkeep
 
 # Dev scratchpad files
-scrach.py
+
