@@ -26,8 +26,6 @@ def main():
 
             with open(entry.path, 'r') as f:
                 run_json = json.load(f)
-                if run_json["start_time"] == 1772835715:
-                    print(entry.path)     
                 extract_card_choices(card_choices, run_json)
 
     df_card_choices = pd.DataFrame(card_choices)
@@ -43,17 +41,11 @@ def calculate_elo(df:pd.DataFrame):
     
     initial_dict = {
         "elo_winning":elo_initial,
+        "elo_losing":elo_initial,
         "elo_all":elo_initial,
         "elo_act1":elo_initial,
         "elo_act2":elo_initial,
         "elo_act3":elo_initial
-    }
-    zero_dict = {
-        "elo_all":0,
-        "elo_act1":0,
-        "elo_act2":0,
-        "elo_act3":0,
-        "elo_winning":0
     }
     elo_dict = {}
 
@@ -86,6 +78,8 @@ def calculate_elo(df:pd.DataFrame):
             ]
         if row["win"]:
             elo_categories.append("elo_winning")
+        else:
+            elo_categories.append("elo_losing")
 
         
         for category in elo_categories:
