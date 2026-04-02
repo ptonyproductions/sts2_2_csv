@@ -122,7 +122,7 @@ def calculate_elo(df:pd.DataFrame):
     df_card_elos = df_card_elos.drop(columns=['index'])
     cols = ['Character', 'Card'] + [c for c in df_card_elos.columns if c not in ['Character', 'Card', 'index']]
     df_card_elos = df_card_elos[cols]
-    print(df_card_elos)
+    # print(df_card_elos)
     df_card_elos.to_csv("Exports/card_elos.csv")
     
     pass
